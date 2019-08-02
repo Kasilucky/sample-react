@@ -29,36 +29,36 @@ export default class Header extends Component {
   }
   render() {
     const userslist = this.state.users.map(user => (
-      <div className="card">
+      <div className="card" key={user.id}>
         <div className="row no-gutters">
           <div className="photo">
             <img src={user.picture.large} className="image" alt="icon" />
           </div>
-          <table class="table">
+          <table className="table">
             <thead>
               <tr>
                 <th>
-                  <i class="fa fa-user" />
+                  <i className="fa fa-user" />
                   Firstname
                 </th>
                 <th>
-                  <i class="fa fa-user" />
+                  <i className="fa fa-user" />
                   Lastname
                 </th>
                 <th>
-                  <i class="fa fa-envelope" />
+                  <i className="fa fa-envelope" />
                   Email
                 </th>
                 <th>
-                  <i class="fa fa-heartbeat" aria-hidden="true" />
+                  <i className="fa fa-heartbeat" aria-hidden="true" />
                   Date of Birth
                 </th>
                 <th>
-                  <i class="fa fa-address-card-o" />
+                  <i className="fa fa-address-card-o" />
                   Address
                 </th>
                 <th>
-                  <i class="fa fa-phone-square" aria-hidden="true" />
+                  <i className="fa fa-phone-square" aria-hidden="true" />
                   Phone Number
                 </th>
               </tr>
