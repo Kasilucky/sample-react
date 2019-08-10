@@ -10,6 +10,18 @@
 }
 .card {
   box-shadow: 2px 2px 2px 2px white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+button {
+  width: 150px;
+  height: 40px;
+  border-radius: 20px;
+  font-weight: bold !important;
+}
+.errorMsg {
+  color: red;
 }
 h1 {
   color: white;

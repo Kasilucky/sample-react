@@ -89,6 +89,7 @@ export default class Header extends Component {
         <h1>RANDOM USER GENERATOR</h1>
         <div>{userslist}</div>
         <button onClick={this.onRefresh}>Update Users</button>
+        <a href="/register">Register</a>
         <div style={{ color: "white" }}>
           <h2>Example to genarate random number</h2>
           <h3>Random Number:{Math.random()}</h3>
