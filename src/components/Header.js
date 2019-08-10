@@ -27,6 +27,13 @@ export default class Header extends Component {
       .then(data => this.setState({ users: data.results }))
       .catch(err => console.log("my err is ", err));
   }
+  onRefresh = () => {
+    window.location.reload();
+  };
+  forceUpdateState = () => {
+    this.forceUpdate();
+  };
+
   render() {
     const userslist = this.state.users.map(user => (
       <div className="card" key={user.id}>
@@ -81,6 +88,12 @@ export default class Header extends Component {
       <div className="main">
         <h1>RANDOM USER GENERATOR</h1>
         <div>{userslist}</div>
+        <button onClick={this.onRefresh}>Update Users</button>
+        <div style={{ color: "white" }}>
+          <h2>Example to genarate random number</h2>
+          <h3>Random Number:{Math.random()}</h3>
+          <button onClick={this.forceUpdateState}>Force Update</button>
+        </div>
       </div>
     );
   }
